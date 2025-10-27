@@ -1,0 +1,39 @@
+by unit of measure
+
+const groupedMetrics = {
+  time: ["timestamp"],
+  temperature: ["temp", "batt_temp"],
+  humidity: ["hum"],
+  voltage: ["vbat", "batt_v"],
+  batteryPercent: ["batt_soc"],
+  particulates: ["pm1", "pm25", "pm10"],
+  gas_no2: ["no2_we", "no2_aux"],
+  gas_ox: ["ox_we", "ox_aux"]
+};
+
+
+
+OR
+
+group 1 
+timestamp: "Time",
+temp: "Temp (°C)",
+hum: "Humidity (%)",
+
+group 2 
+timestamp: "Time",
+vbat: "Volt (VBat)",
+batt_v: "Battery (V)",
+batt_soc: "Battery (%)",
+batt_temp: "Batt Temp (°C)",
+
+group 3 
+timestamp: "Time",
+pm1: "PM1 (µg/m³)",
+pm25: "PM2.5 (µg/m³)",
+pm10: "PM10 (µg/m³)",
+no2_we: "NO₂ WE",
+no2_aux: "NO₂ AUX",
+ox_we: "Oₓ WE",
+ox_aux: "Oₓ AUX"
+
