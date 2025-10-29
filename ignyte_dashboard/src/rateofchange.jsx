@@ -129,7 +129,6 @@ export const BatteryRateOfChangeChart = ({ readings }) => {
     return <p>Loading rate of change data...</p>;
   }
 
-  //   console.log(readings);
   const data = calculateRateOfChange(readings);
   console.log(data);
 
@@ -171,11 +170,27 @@ export const BatteryRateOfChangeChart = ({ readings }) => {
           {
             scaleType: "point",
             data: timestamps,
+            valueFormatter: (timestamp, context) => {
+              const date = new Date(timestamp);
+              const month = date.toLocaleString("en-US", { month: "short" });
+              const day = date.getDate();
+              const hours = date.getHours();
+              const ampm = hours >= 12 ? "PM" : "AM";
+              const displayHours = hours % 12 || 12;
+              const displayMinutes = date
+                .getMinutes()
+                .toString()
+                .padStart(2, "0");
+
+              return context.location === "tick"
+                ? `${month} ${day} \n${displayHours}:${displayMinutes}${ampm}`
+                : `${month} ${day}, ${displayHours}:${displayMinutes} ${ampm}`;
+            },
+            height: 50,
             tickLabelStyle: {
               fontSize: "8px",
               textAnchor: "middle",
               fontWeight: "bold",
-              angle: 45,
             },
           },
         ]}
