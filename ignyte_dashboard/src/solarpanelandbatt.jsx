@@ -49,7 +49,7 @@ function SolarPanelAndBattery() {
         }
       });
 
-      console.log(readingsArr);
+      // console.log(readingsArr);
       setReadings(readingsArr);
     };
 

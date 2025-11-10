@@ -3,10 +3,10 @@ import { Box, Typography } from "@mui/material";
 import { LineChart } from "@mui/x-charts";
 
 const calculateRateOfChange = (readings) => {
-  console.log("=== calculateRateOfChange DEBUG ===");
-  console.log("Input length:", readings?.length);
-  console.log("First reading:", readings?.[0]);
-  console.log("Sample timestamp:", readings?.[0]?.timestamp);
+  // console.log("=== calculateRateOfChange DEBUG ===");
+  // console.log("Input length:", readings?.length);
+  // console.log("First reading:", readings?.[0]);
+  // console.log("Sample timestamp:", readings?.[0]?.timestamp);
   if (!readings || readings.length === 0) {
     return null;
   }

@@ -9,6 +9,7 @@ import {
 } from "./charts";
 import { BatteryRateOfChangeChart } from "./rateofchange";
 import Typography from "@mui/material/Typography";
+import RecordDropChart from "./records_drop_chart";
 
 // ✅ Destructure the prop correctly
 const ChartContainer = ({ readings }) => {
@@ -31,6 +32,10 @@ const ChartContainer = ({ readings }) => {
         Battery Rate of Change
       </Typography>
       <BatteryRateOfChangeChart readings={readings} />
+      <Typography variant="h6" gutterBottom>
+        Record Drops
+      </Typography>
+      <RecordDropChart readings={readings} />
       <Typography variant="h6" gutterBottom>
         No2
       </Typography>

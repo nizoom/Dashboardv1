@@ -5,6 +5,7 @@ import { addTimeStampToData } from "./add_timestamp";
 import HomeButton from "./minis/backbtn";
 import Typography from "@mui/material/Typography";
 import { BatteryRateOfChangeChart } from "./rateofchange";
+import RecordDropChart from "./records_drop_chart";
 
 import {
   No2LineChart,
@@ -83,6 +84,10 @@ const FirstTest = () => {
         Temperature
       </Typography>
       <DHTChart readings={readings} />
+      <Typography variant="h6" gutterBottom>
+        Record Drops
+      </Typography>
+      <RecordDropChart readings={readings} />
     </Stack>
   );
 };
